@@ -57,7 +57,7 @@ def index(request):
         if len(metar)>5:
             context['metar'] = metar
         else:
-            context['metar'] = 'not found'
+            context['metar'] = 'Not found consider using METAR of a nearby regional or international airport'
 
     return render(request, 'index.html',context)
 
