@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Oswald:300' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://kit.fontawesome.com/66857c785c.js" crossorigin="anonymous"></script>
+    <link href="http://fonts.cdnfonts.com/css/modern-typewriter" rel="stylesheet">
+    <!-- @import url('http://fonts.cdnfonts.com/css/modern-typewriter'); -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
+    <style>
+        .card {
+            height: 60px;
+            width: 110px;
+            background: linear-gradient(180deg, #07fa40 50%, #bebeb1 50%);
+            border-radius: 10px;
+        }
+
+        .card2 {
+            height: 60px;
+            width: 110px;
+            border-radius: 10px;
+            background-color: grey;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 48;
+            margin-top: 15px;
+        }
+
+        body {
+            background: #1b1b2b;
+            background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+            padding: 75px;
+            text-align: center;
+            font-family: 'Oswald', sans-serif;
+            font-size: 18px;
+            height: 80vh;
+        }
+
+        h1 {
+            color: #212121;
+            font-weight: 100;
+        }
+
+        .spacer {
+            padding: 30px 0;
+        }
+
+        .menu-3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            list-style: none;
+        }
+
+        .menu-3 li {
+            width: 105px;
+            height: 50px;
+            transition: background-position-x 0.6s linear;
+            text-align: center;
+        }
+
+        .menu-3 li a {
+            color: #212121;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: all 0.45s;
+        }
+
+        .menu-3 li:hover {
+            background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB2ZXJzaW9uPSIxLjEi%0D%0AIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhs%0D%0AaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB3aWR0%0D%0AaD0iMzkwcHgiIGhlaWdodD0iNTBweCIgdmlld0JveD0iMCAwIDM5MCA1MCIgZW5hYmxlLWJhY2tn%0D%0Acm91bmQ9Im5ldyAwIDAgMzkwIDUwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBhdGggZmlsbD0i%0D%0Abm9uZSIgc3Ryb2tlPSIjZDk0ZjVjIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLW1pdGVybGlt%0D%0AaXQ9IjEwIiBkPSJNMCw0Ny41ODVjMCwwLDk3LjUsMCwxMzAsMAoJYzEzLjc1LDAsMjguNzQtMzgu%0D%0ANzc4LDQ2LjE2OC0xOS40MTZDMTkyLjY2OSw0Ni41LDI0My42MDMsNDcuNTg1LDI2MCw0Ny41ODVj%0D%0AMzEuODIxLDAsMTMwLDAsMTMwLDAiLz4KPC9zdmc+Cg==");
+            -webkit-animation: line 1s;
+            animation: line 1s;
+        }
+
+        .menu-3 li:hover a {
+            color: #d94f5c;
+        }
+
+        .menu-3 li:not(:last-child) {
+            margin-right: 30px;
+        }
+
+        @-webkit-keyframes line {
+            0% {
+                background-position-x: 390px;
+            }
+        }
+
+        @keyframes line {
+            0% {
+                background-position-x: 390px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="style-3">
+        <ul class="menu-3">
+            <li class="current"><a href="#" data-hover="Home">Home</a></li>
+            <li><a href="#" data-hover="About Us">About Us</a></li>
+            <li><a href="#" data-hover="Blog">Blog</a></li>
+            <li><a href="#" data-hover="Services">Services</a></li>
+            <li><a href="#" data-hover="Products">Products</a></li>
+            <li><a href="#" data-hover="Contact">Contact</a></li>
+        </ul>
+    </nav>
+    TEST
+    <div>
+        <form action="" method="POST"> {% csrf_token %}
+            <input type="text" placeholder="ICAO" name="code" style="border-radius: 5px; outline: none; border: 1px;">
+            <input type="submit" value="GET METAR">
+        </form>
+    </div>
+    <!-- <p style="font-family: 'MODERN TYPEWRITER', sans-serif;"> {{ metar }}</p> -->
+    <p style="font-family: 'Neucha', cursive;">{{ metar }}</p>
+    <!-- <div class="card" style="padding-left:5px; text-align: center;">
+        <p style="padding-top: 5px;">VFR</p>
+        TST
+    </div>
+    <br>
+
+    <div class="card2">
+        <span class="material-symbols-outlined">
+            sunny
+        </span>
+    </div>
+    <a href="#">Admin update prices</a> -->
+</body>
+
+</html>
